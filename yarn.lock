@@ -962,6 +962,31 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@react-keycloak/core@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@react-keycloak/core/-/core-3.2.0.tgz#e46f1951b0d7873f7f2fcd73dd0c270cb0b18db8"
+  integrity sha512-1yzU7gQzs+6E1v6hGqxy0Q+kpMHg9sEcke2yxZR29WoU8KNE8E50xS6UbI8N7rWsgyYw8r9W1cUPCOF48MYjzw==
+  dependencies:
+    react-fast-compare "^3.2.0"
+
+"@react-keycloak/keycloak-ts@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@react-keycloak/keycloak-ts/-/keycloak-ts-0.2.1.tgz#ae8ef66829604c8c9c0320642b29fcb1d53dc690"
+  integrity sha512-rP4GGfTGdnuIlqg/9NZ1Gua39NQfTqPa0iOmZROoE0Dq3xh/c3rfGBjuiOWI/4Xqraa3verVddiqR2owS2t/aA==
+  dependencies:
+    base64-js "^1.3.1"
+    js-sha256 "^0.9.0"
+    jwt-decode "^2.2.0"
+
+"@react-keycloak/native@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@react-keycloak/native/-/native-0.5.5.tgz#fb189adab6d9880bbf45f61a83a0799f735cd0a7"
+  integrity sha512-amTHPpzxGn/AHfY604lZR5192frhbEjM95yy6B5NbRqooAcIYzHfMgqlI7BDlaqFTbX21Y0Azug075rGSqFZRw==
+  dependencies:
+    "@react-keycloak/core" "^3.2.0"
+    "@react-keycloak/keycloak-ts" "^0.2.1"
+    react-native-inappbrowser-reborn "^3.6.3"
+
 "@react-native-community/cli-debugger-ui@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-5.0.1.tgz#6b1f3367b8e5211e899983065ea2e72c1901d75f"
@@ -1319,7 +1344,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react-native@^0.64.12":
+"@types/react-native-text-input-mask@^0.7.6":
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/@types/react-native-text-input-mask/-/react-native-text-input-mask-0.7.6.tgz#8a8293927d4e62ffcb0e265fd32140a8300dd029"
+  integrity sha512-em1xsBrMObAwZEynUqJVAI7LxLTaGjk7CJHz3FYRzInDIJV0QwdZxbkX7FX40+OCkE9u+aZb2JDj3A/81tLOnA==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native@*", "@types/react-native@^0.64.12":
   version "0.64.12"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.12.tgz#1c6a3226c26d7a5949cdf8878e6cfe95fe0951d6"
   integrity sha512-sw6WGSaL219zqrgdb4kQUtFB9iGXC/LmecLZ+UUWEgwYvD0YH81FqWYmONa2HuTkOFAsxu2bK4DspkWRUHIABQ==
@@ -1842,7 +1875,7 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-base64-js@^1.1.2, base64-js@^1.5.1:
+base64-js@^1.1.2, base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -4136,6 +4169,11 @@ joi@^17.2.1:
     "@sideway/formula" "^3.0.0"
     "@sideway/pinpoint" "^2.0.0"
 
+js-sha256@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
+  integrity sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4275,6 +4313,11 @@ jsonify@~0.0.0:
   dependencies:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
+
+jwt-decode@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
+  integrity sha1-fYa9VmefWM5qhHBKZX3TkruoGnk=
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -5080,6 +5123,11 @@ open@^6.2.0:
   dependencies:
     is-wsl "^1.1.0"
 
+opencollective-postinstall@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
+  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
+
 optionator@^0.8.1:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/optionator/-/optionator-0.8.3.tgz#84fa1d036fe9d3c7e21d99884b601167ec8fb495"
@@ -5391,6 +5439,11 @@ react-devtools-core@^4.6.0:
     shell-quote "^1.6.1"
     ws "^7"
 
+react-fast-compare@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
 "react-is@^16.12.0 || ^17.0.0", react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
@@ -5426,10 +5479,23 @@ react-native-gesture-handler@^1.10.3:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-inappbrowser-reborn@^3.6.3:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-inappbrowser-reborn/-/react-native-inappbrowser-reborn-3.6.3.tgz#12938733e5337a9f328973557da0cfd13085bfbd"
+  integrity sha512-fqF708GVZ/7zja0/GyJQfjDfKREOe1fxYq8RAKZo8/KK6SkFO9hBlYqC3PwLFPw29zzwBzR+6EpL3qo95igkLw==
+  dependencies:
+    invariant "^2.2.4"
+    opencollective-postinstall "^2.0.2"
+
 react-native-iphone-x-helper@^1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
+react-native-mask-input@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-mask-input/-/react-native-mask-input-1.0.3.tgz#e490796e1af8c53074d5807b9de1d91bcff97e10"
+  integrity sha512-Ve0bllu7AJVnUr+PeJLzr5MDxtfpR3XqS/+pzH5f6C7LpPwmeFf4v0oNfSp26Q3WjReKImiWUVo1xKnc4KG0Qg==
 
 react-native-reanimated@^2.2.0:
   version "2.2.0"
@@ -5460,6 +5526,11 @@ react-native-svg@^12.1.1:
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
+
+react-native-text-input-mask@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-text-input-mask/-/react-native-text-input-mask-3.1.4.tgz#9b09d97a910ce8c24024d6187256b07c73e173ac"
+  integrity sha512-XhTPL1/Pv0kyuH8TMJGaxfnq5su9e+4G2PLngiismZ4xbP8+W/1ZEH4KQJQV+QkE2I5Oi+lPJXB2E47s60/OBA==
 
 react-native@0.64.2:
   version "0.64.2"

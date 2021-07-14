@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Icon} from '@ui-kitten/components';
+import {Icon, Button} from '@ui-kitten/components';
 
-import NewsScreen from '../NewsScreen/NewsScreen';
+import NewsScreen from '../../screens/NewsScreen/NewsScreen';
 
 // Icon Header
 const ChevronIcon = (props: any) => {
@@ -21,7 +21,9 @@ const NewsStackScreen = () => {
         component={NewsScreen}
         options={{
           title: 'Все новости',
-          headerRight: () => <ChevronIcon />,
+          // headerRight: () => (
+          //   <Button accessoryRight={ChevronIcon} appearance="ghost"></Button>
+          // ),
         }}
       />
     </NewsStack.Navigator>

@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Text} from '@ui-kitten/components';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   BottomNavigation,
   BottomNavigationTab,
   Icon,
+  Button,
 } from '@ui-kitten/components';
 
 import EventsStackScreen from './EventsStackScreen';
@@ -25,9 +25,6 @@ const MoreIcon = (props: any) => (
   <Icon name="more-vertical-outline" {...props} />
 );
 
-const AllIcon = (props: any) => (
-  <Icon style={styles.icon} fill="#8F9BB3" name="star" />
-);
 //
 
 const BottomTabBar = ({navigation, state}: any) => (
@@ -43,23 +40,11 @@ const BottomTabBar = ({navigation, state}: any) => (
 
 const AppTabBarScreen = () => {
   return (
-    <AppTab.Navigator tabBar={props => <BottomTabBar {...props} />}>
+    <AppTab.Navigator tabBar={props => <BottomTabBar {...props} />} >
       <AppTab.Screen name="News" component={NewsStackScreen} />
-      <AppTab.Screen
-        name="Events"
-        component={EventsStackScreen}
-        options={{title: 'События'}}
-      />
-      <AppTab.Screen
-        name="Surveys"
-        component={SurveysStackScreens}
-        options={{title: 'Анкеты'}}
-      />
-      <AppTab.Screen
-        name="More"
-        component={MoreStackScreen}
-        options={{title: 'Eщё'}}
-      />
+      <AppTab.Screen name="Events" component={EventsStackScreen} />
+      <AppTab.Screen name="Surveys" component={SurveysStackScreens} />
+      <AppTab.Screen name="More" component={MoreStackScreen} />
     </AppTab.Navigator>
   );
 };
