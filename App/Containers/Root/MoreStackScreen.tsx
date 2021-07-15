@@ -9,7 +9,11 @@ const MoreStack = createStackNavigator();
 const MoreStackScreen = () => {
   return (
     <MoreStack.Navigator>
-      <MoreStack.Screen name="More" component={MoreScreen} />
+      <MoreStack.Screen
+        name="More"
+        component={MoreScreen}
+        options={{title: 'Eще'}}
+      />
     </MoreStack.Navigator>
   );
 };

@@ -9,7 +9,11 @@ const EventsStack = createStackNavigator();
 const EventsStackScreen = () => {
   return (
     <EventsStack.Navigator>
-      <EventsStack.Screen name="Events" component={EventsScreen} />
+      <EventsStack.Screen
+        name="Events"
+        component={EventsScreen}
+        options={{title: 'Cобытия'}}
+      />
     </EventsStack.Navigator>
   );
 };

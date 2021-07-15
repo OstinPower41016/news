@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../100included-app/App"
+	}
+],
+  "settings": {}
+}

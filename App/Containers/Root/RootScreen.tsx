@@ -9,7 +9,7 @@ const RootStack = createStackNavigator();
 
 const RootScreen = () => {
   return (
-    <RootStack.Navigator>
+    <RootStack.Navigator initialRouteName="Tabs">
       <RootStack.Screen
         name="Auth"
         component={AuthScreen}

@@ -40,11 +40,12 @@ const BottomTabBar = ({navigation, state}: any) => (
 
 const AppTabBarScreen = () => {
   return (
-    <AppTab.Navigator tabBar={props => <BottomTabBar {...props} />} >
+    <AppTab.Navigator tabBar={props => <BottomTabBar {...props} />}>
       <AppTab.Screen name="News" component={NewsStackScreen} />
       <AppTab.Screen name="Events" component={EventsStackScreen} />
       <AppTab.Screen name="Surveys" component={SurveysStackScreens} />
       <AppTab.Screen name="More" component={MoreStackScreen} />
+      <AppTab.Screen name="Root" component={NewsStackScreen} />
     </AppTab.Navigator>
   );
 };

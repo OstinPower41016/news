@@ -5,6 +5,7 @@ import {ApplicationProvider, IconRegistry} from '@ui-kitten/components';
 import {NavigationContainer} from '@react-navigation/native';
 import {EvaIconsPack} from '@ui-kitten/eva-icons';
 import {ReactNativeKeycloakProvider} from '@react-keycloak/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import keycloak from './keycloak';
 import RootScreen from './containers/Root/RootScreen';

@@ -9,7 +9,11 @@ const SurveysStack = createStackNavigator();
 const SurveysStackScreens = () => {
   return (
     <SurveysStack.Navigator>
-      <SurveysStack.Screen name="Surveys" component={SurveysScreen} />
+      <SurveysStack.Screen
+        name="Surveys"
+        component={SurveysScreen}
+        options={{title: 'Анкеты'}}
+      />
     </SurveysStack.Navigator>
   );
 };
