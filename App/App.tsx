@@ -8,7 +8,7 @@ import {ReactNativeKeycloakProvider} from '@react-keycloak/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import keycloak from './keycloak';
-import RootScreen from './containers/Root/RootScreen';
+import RootScreen from './/navigation/RootScreen';
 
 const App = () => {
   return (

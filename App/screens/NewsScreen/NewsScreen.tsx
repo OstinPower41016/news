@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 import ViewCenter from '../../components/ViewCenter';
 
-import NewsContent from '../../components/NewsScreen/NewsContent';
+import NewsContent from '../../components/NewsContent/NewsContent';
 
 const NewsScreen = (props: any) => {
   return (

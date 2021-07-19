@@ -12,6 +12,8 @@ import isEmpty from 'lodash/isEmpty';
 import {Card, Avatar, Text, Divider, Icon, Button} from '@ui-kitten/components';
 import {useNavigation} from '@react-navigation/native';
 
+import getPreparedData from '../../utils/getPreparedData';
+
 import styles from './NewsContentStyles';
 
 interface IHeartIcon extends Partial<ImageProps> {
@@ -55,23 +57,7 @@ const NewsContent = (props: any) => {
     getNews().then(res => {
       return setData(
         JSON.parse(res!).map((val: any) => {
-          const day = new Date(val.updatedAt).getDate();
-          const year = new Date(val.updatedAt).getFullYear();
-          const months = [
-            'Января',
-            'Февраля',
-            'Марта',
-            'Апреля',
-            'Мая',
-            'Июня',
-            'Июля',
-            'Августа',
-            'Сентября',
-            'Октября',
-            'Ноября',
-            'Декабря',
-          ];
-          const month = months[new Date(val.updatedAt).getMonth()];
+          const [day, month, year] = getPreparedData(val.updatedAt);
 
           return {...val, updatedAt: `${day} ${month} ${year}`};
         }),

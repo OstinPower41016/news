@@ -3,8 +3,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Icon, Button} from '@ui-kitten/components';
 
-import NewsScreen from '../../screens/NewsScreen/NewsScreen';
-import NewsItem from '../../screens/NewsItem/NewsItem';
+import NewsScreen from '../screens/NewsScreen/NewsScreen';
+import NewsItem from '../screens/NewsItem/NewsItem';
 
 // interface INewsStackScreen {
 //   News: undefined;
