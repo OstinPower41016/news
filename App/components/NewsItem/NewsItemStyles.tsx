@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'rgba(0,0,0,.5)',
   },
+  comment: {
+    paddingVertical: 15,
+  },
   buttonComment: {
     marginVertical: 10,
   },

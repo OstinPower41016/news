@@ -99,7 +99,7 @@ const NewsContent = (props: any) => {
                 {title}
               </Text>
               <Image source={{uri: imageURL}} style={styles.imageNews} />
-              <Text style={styles.description} category="">
+              <Text style={styles.description} >
                 {description}
               </Text>
             </View>

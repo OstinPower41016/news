@@ -1,12 +1,10 @@
-import {} from 'mobx-react-lite';
 import {makeAutoObservable} from 'mobx';
 
-class NewsState {
-  isVisibleModal: boolean;
+class News {
+  isVisibleModal = false;
 
   constructor() {
     makeAutoObservable(this);
-    this.isVisibleModal = false;
   }
 
   openModal() {
@@ -14,4 +12,4 @@ class NewsState {
   }
 }
 
-export default NewsState;
+export default new News();

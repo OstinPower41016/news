@@ -8,18 +8,20 @@ interface INewsFormComment {
 
 const NewsFormComment: React.FC<INewsFormComment> = props => {
   return (
-    <Card style={[styles.card, props.style]}>
-      <Input
-        size="large"
-        multiline={true}
-        placeholder="Ваш комментарий..."
-        textStyle={{minHeight: 64}}
-        style={styles.input}
-      />
-      <View style={styles.buttonWrapper}>
-        <Button size="small" style={styles.button}>
-          Отправить
-        </Button>
+    <Card>
+      <View style={[styles.card, props.style]}>
+        <Input
+          size="large"
+          multiline={true}
+          placeholder="Ваш комментарий..."
+          textStyle={{minHeight: 64}}
+          style={styles.input}
+        />
+        <View style={styles.buttonWrapper}>
+          <Button size="small" style={styles.button}>
+            Отправить
+          </Button>
+        </View>
       </View>
     </Card>
   );

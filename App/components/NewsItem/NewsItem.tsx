@@ -7,9 +7,8 @@ import {
   FlatList,
   Animated,
 } from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
 import isEmpty from 'lodash/isEmpty';
-import {Text, Card, Button, Icon} from '@ui-kitten/components';
+import {Text, Card, Button, Icon, Divider} from '@ui-kitten/components';
 
 import getPreparedData from '../../utils/getPreparedData';
 import styles from './NewsItemStyles';
@@ -82,17 +81,6 @@ const NewsItem: React.FC<INewsItem> = (props: any) => {
     });
   }, []);
 
-  const renderComment = ({item}: any) => {
-    const [day, month, year] = getPreparedData(item.updatedAt);
-    return (
-      <Card>
-        <Text>{item.username}</Text>
-        <Text>{`${day} ${month} ${year}`}</Text>
-        <Text>{item.text}</Text>
-      </Card>
-    );
-  };
-
   return (
     <View>
       {isEmpty(newsItem) && <Text>Loading...</Text>}
@@ -126,22 +114,29 @@ const NewsItem: React.FC<INewsItem> = (props: any) => {
                   <NewsFormComment />
                 </View>
               </Animated.View>
-              {newsItem.comments.map((item: any) => {
-                const [day, month, year] = getPreparedData(item.updatedAt);
-                return (
-                  <Card key={item.id}>
-                    <View style={styles.commnetUser}>
-                      <AvatarComment username={item.username} />
-                      <View>
-                        <Text>{item.username}</Text>
-                        <Text
-                          style={styles.date}>{`${day} ${month} ${year}`}</Text>
+              <Card>
+                {newsItem.comments.map((item: any) => {
+                  const [day, month, year] = getPreparedData(item.updatedAt);
+                  return (
+                    <>
+                      <View key={item.id} style={styles.comment}>
+                        <View style={styles.commnetUser}>
+                          <AvatarComment username={item.username} />
+                          <View>
+                            <Text>{item.username}</Text>
+                            <Text
+                              style={
+                                styles.date
+                              }>{`${day} ${month} ${year}`}</Text>
+                          </View>
+                        </View>
+                        <Text style={styles.commentText}>{item.text}</Text>
                       </View>
-                    </View>
-                    <Text style={styles.commentText}>{item.text}</Text>
-                  </Card>
-                );
-              })}
+                      <Divider />
+                    </>
+                  );
+                })}
+              </Card>
             </View>
           </ScrollView>
         </View>
